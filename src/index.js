@@ -2,8 +2,11 @@ import * as Vue from "vue/dist/vue.esm-bundler.js"
 
     const app = Vue.createApp({
       template: `
-      <H2>Step 04: Computed Properties</H2>
-        <div v-for="num in evenList">
+      <H2>Step 05: Class Bindings</H2>
+        <div
+          v-for="num in numbers"
+          :class="getClass(num)"
+        >
           {{ num }}
         </div>
       `,
@@ -25,6 +28,9 @@ import * as Vue from "vue/dist/vue.esm-bundler.js"
         },
         isEven(val) {
           return val % 2 === 0
+        },
+        getClass(val) {
+          return this.isEven(val) ? 'red' : 'blue'
         }
       }
     })

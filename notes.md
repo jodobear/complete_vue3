@@ -66,6 +66,8 @@ Re-recorded course with vite 2x
 
 - **Computed properties** are functions that take no arguments. Vue is able to track the dependencies and update the DOM based on the computed properties. Can they be thought of as lambda functions?
 
+- Class bindings using `v-bind` or `:`.
+
 #### Form Validation I
 
 - If you don't provide an argument to a function passed to a html attribute, then the first arg is native js event called `$evt` by convention.
