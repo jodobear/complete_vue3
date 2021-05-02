@@ -2,21 +2,16 @@ import * as Vue from "vue/dist/vue.esm-bundler.js"
 
     const app = Vue.createApp({
       template: `
-      <h1>Hello {{ msg }}</h1>
-      <hr>
-      <H2>Step 02: Methods & <span style="color: orange">v-on</span> directive</H2>
-        <button @click="increment">Increment</button>
-        <p>{{ count }}</p>
-      <hr>
-      <H2>Step 03: Control Flow</H2>
-        <p v-if="isEven()">
-          Even
-        </p>
-        <p v-else>
-          Odd
-        </p>
-      <hr>
+      <H2>Step 04: Computed Properties</H2>
+        <div v-for="num in evenList">
+          {{ num }}
+        </div>
       `,
+      computed: {
+        evenList() {
+          return this.numbers.filter(num => this.isEven(num))
+        }
+      },
       data() {
         return {
         msg: "world",
@@ -28,8 +23,8 @@ import * as Vue from "vue/dist/vue.esm-bundler.js"
         increment() {
           this.count += 1
         },
-        isEven() {
-          return this.count % 2 === 0
+        isEven(val) {
+          return val % 2 === 0
         }
       }
     })
