@@ -98,7 +98,7 @@ Re-recorded course with vite 2x
 
 - create a component then to use it in another component add `components: {}` to that component and use it as a custom html tag e.g. `<hello />` or `<Hello />`.
 
-- **Props**: Properties are how you can pass data from parent to child components. In `<num :number="n" />`, `:number` is the prop which should match the `props` in the component `Num`, `n` is the value it receives from the parent component(`app`). You define `props` that you are going to receive in child component:
+- **Props**: Properties are how you can pass data from **parent -> child** components. In `<num :number="n" />`, `:number` is the prop which should match the `props` in the component `Num`, `n` is the value it receives from the parent component(`app`). You define `props` that you are going to receive in child component:
 
 ```vue
 <script>
