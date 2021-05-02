@@ -48,7 +48,7 @@ Re-recorded course with vite 2x
 
 - `Hello {{ msg }}`: `{{ msg }}` interpolation symbol. The `app` will render the var `msg` as described in `data()` where it is mounted in the html element.
 
-
+- Moved `data` & `template` to `index.js`. `template` holds all the DOM elements.
 
 - Vue uses `SFC: Single File Component` so we also include our styles with `data` & `template`.
 
