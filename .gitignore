@@ -1,3 +1,4 @@
 source_repo
 node_modules
-lectures.directory
+lectures
+.directory
