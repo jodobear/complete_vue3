@@ -2,9 +2,11 @@
 
 ## ERRATA & NOTE
 
-At the time of recording, the version of Vite was 1.x. As of Jan 2021, Vite 2.x has been released which has some breaking changes.
+Re-recorded course with vite 2x
 
-I will re-record the course periodically to keep it up to date, but until then please run `yarn add vite@1.0.0-rc.13` when installing Vite to ensure things work correctly.
+~~At the time of recording, the version of Vite was 1.x. As of Jan 2021, Vite 2.x has been released which has some breaking changes.~~
+
+~~I will re-record the course periodically to keep it up to date, but until then please run `yarn add vite@1.0.0-rc.13` when installing Vite to ensure things work correctly.~~
 
 ## Tooling
 
@@ -42,9 +44,11 @@ I will re-record the course periodically to keep it up to date, but until then p
 
 - `createApp(App).mount('#app')`: createApp(<component>).mount('<location>')
 
-- `Hello {{ msg }}`: `{{ msg }}` interpolation symbol. The `app` will render the var `msg` as described in `data` function where it is mounted in the html element.
+- `data()` has to return values.
 
-- Moved `data` & `template` to `index.js`. `template` holds what we are going to display & within what tags.
+- `Hello {{ msg }}`: `{{ msg }}` interpolation symbol. The `app` will render the var `msg` as described in `data()` where it is mounted in the html element.
+
+
 
 - Vue uses `SFC: Single File Component` so we also include our styles with `data` & `template`.
 
