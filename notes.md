@@ -86,11 +86,13 @@ Re-recorded course with vite 2x
 
 - This is extremely common esp. with inputs, enter `v-model`:
 
-```
+```html
 <input @input="input" :value="value" /> = <input v-model="value" />
 ```
 
-- `v-model` works with any kind of value, not just strings as illustrated in the code.
+- `v-model` is a shorthand for `input` listener & `value` attribute or rather any custom attribute.
+
+-  If works with any kind of values as demonstrated in the code.
 
 #### Components
 
