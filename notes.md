@@ -70,15 +70,17 @@ Re-recorded course with vite 2x
 
 #### Form Validation I
 
+- Two-way binding: `:value="value"` and defining `value: '<default_value>'` variable in data.
+
 - If you don't provide an argument to a function passed to a html attribute, then the first arg is native js event called `$evt` by convention.
 
-- `<input @input="input()" />` produces `undefined` on `console.log($evt)` even with `return` while `<input @input="input" />` logs the event to the console properly. `input` without `()` it gives us the native js event as the value.
+- `<input @input="handleInput()" />` produces `undefined` on `console.log($evt)` even with `return` while `<input @input="handleInput" />` logs the event to the console properly. `handleInput` without `()` it gives us the native js event as the value.
 
 - `$evt` gives us all the information regarding the event. So, you can access the value of the event for e.g. using `$evt.target.value`. Very useful.
 
 #### `v-model`
 
-- `<input @input="input" :value="value" />` we listen for the input event and bind it's value to the variable `value` in data, this way we keep the state out of our DOM and in our `data` function.
+- `<input @input="handleInput" :value="value" />` we listen for the input event and bind it's value to the variable `value` in data, this way we keep the state out of our DOM and in our `data` function.
 
 - By rendering the `{{ value }}` here we did two-way binding; we listen for DOM event `input` send it's value to be stored in `data` and render it from `data` into `{{ value }}`.
 

@@ -2,35 +2,31 @@ import * as Vue from "vue/dist/vue.esm-bundler.js"
 
     const app = Vue.createApp({
       template: `
-      <H2>Step 05: Class Bindings</H2>
-        <div
-          v-for="num in numbers"
-          :class="getClass(num)"
-        >
-          {{ num }}
+      <H2>Step 06: Form Validation</H2>
+        <input
+          :value="value"
+          @input="handleInput()"
+        />
+        <div class="red">
+          {{ error }}
         </div>
+
       `,
       computed: {
-        evenList() {
-          return this.numbers.filter(num => this.isEven(num))
+        error() {
+          if (this.value.length < 5) {
+            return "Must be greater than 5"
+          }
         }
       },
       data() {
         return {
-        msg: "world",
-        count: 0,
-        numbers: [1, 2, 3, 4, 5, 6, 7]
+          value: 'user'
         }
       },
       methods: {
-        increment() {
-          this.count += 1
-        },
-        isEven(val) {
-          return val % 2 === 0
-        },
-        getClass(val) {
-          return this.isEven(val) ? 'red' : 'blue'
+        handleInput($evt) {
+          this.value = $evt.target.value
         }
       }
     })
