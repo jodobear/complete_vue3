@@ -114,6 +114,8 @@ Re-recorded course with vite 2x
 
 ## Proj 01 - Form Validation
 
+- We don't use `import * as Vue from "vue/dist/vue.esm-bundler.js"` and instead use `import { createApp } from 'vue'` since we are going to use SFC.
+
 - `<style scoped>` will only apply styles to the component within which it is defined.
 
 - `data() {}` is to be defined within `export default {}`.
