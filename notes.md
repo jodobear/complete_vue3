@@ -96,25 +96,21 @@ Re-recorded course with vite 2x
 
 #### Components
 
-- create a component then to use it in another component add `components: {}` to that component and use it as a custom html tag e.g. `<hello />` or `<Hello />`.
+- `<num v-for="n in numbers" :number="n" />` you can use `v-for` in custom components.
 
 - **Props**: Properties are how you can pass data from **parent -> child** components. In `<num :number="n" />`, `:number` is the prop which should match the `props` in the component `Num`, `n` is the value it receives from the parent component(`app`). You define `props` that you are going to receive in child component:
 
 ```vue
-<script>
-export default {
   props: {
     number: {
       type: Number
     }
   }
-}
-</script>
 ```
 
-- `<num v-for="n in numbers" :number="n" />` you can use `v-for` in custom components.
+#### Child -> Parent Communication
 
-- **`$emit`**: To send data from child to parent use `$emit`. You emit event `chosen` which you listen for in parent component as `@chosen` and then define methods as req. You can send simple data `this.number` or payload `{ number: this.number}`.
+- **`$emit`**: You `$emit` event named `chosen` (first arg) from child to parent with data as the second arg which you listen for in parent component as `@chosen` and then define methods as req. You can send simple data `this.number` or payload that uses JSON syntax: `{ number: this.number}`.
 
 ## Proj 01 - Form Validation
 
