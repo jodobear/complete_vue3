@@ -26,7 +26,7 @@ Re-recorded course with vite 2x
 
 - `v-show`: will render the node but set `style="display": none`, e.g. use in animations.
 
-- `v-if`: will completely remove the node from the DOM. syntax: `<div v-if="isEven()">`
+- `v-if`: will completely remove the node from the DOM. syntax: `<div v-if="isEven()">` the parenthesis is important here.
 
 - `v-else`
 
@@ -49,6 +49,8 @@ Re-recorded course with vite 2x
 - `Hello {{ msg }}`: `{{ msg }}` interpolation symbol. The `app` will render the var `msg` as described in `data()` where it is mounted in the html element.
 
 - Moved `data` & `template` to `index.js`. `template` holds all the DOM elements.
+
+- If `<button @click="increment()">` `increment` function isn't going to take any args, you don't need the parenthesis as Vue knows it's a function if defined in `methods`.
 
 - Vue uses `SFC: Single File Component` so we also include our styles with `data` & `template`.
 
